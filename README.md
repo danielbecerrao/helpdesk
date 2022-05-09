@@ -31,6 +31,23 @@
 ```bash
 $ npm install
 ```
+#### Add ormconfig.json
+~~~
+{
+  "type": "postgres",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "username": "postgres",
+  "password": "password",
+  "database": "helpdesk",
+  "entities": ["dist/**/*.entity{.ts,.js}",  "node_modules/nestjs-admin/**/*.entity.js"],
+  "synchronize": true,
+  "logging": false,
+  "migrations": ["dist/migrations/*{.ts,.js}"],
+  "migrationsTableName": "migrations_typeorm",
+  "migrationsRun": true
+}
+~~~
 
 ## Running the app
 
